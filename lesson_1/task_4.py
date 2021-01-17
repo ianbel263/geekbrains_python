@@ -12,3 +12,14 @@ print(f'Максимальная цифра в числе {user_number}: {max_di
 
 # другой способ
 print(f'С использованием функции max(): {max(user_number)}')
+
+# с использованием арифметических операций
+user_number = int(input('Введите целое положительное число: '))
+max_digit = user_number % 10
+
+while user_number > 0:
+    user_number = user_number // 10
+    if user_number % 10 > max_digit:
+        max_digit = user_number % 10
+
+print(f'С использованием арифметических операций: {max_digit}')
