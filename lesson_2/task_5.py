@@ -8,7 +8,15 @@
 # Пользователь ввел число 1. Результат: 7, 5, 3, 3, 2, 1.
 # Набор натуральных чисел можно задать непосредственно в коде, например, my_list = [7, 5, 3, 3, 2].
 
-rank_list = [7, 5, 3, 3, 2]
+import random
+
+rank_list = []
+for number in range(random.randint(10, 20)):
+    rank_list.append(random.randint(0, 10))
+
+rank_list.sort(reverse=True)
+print(f'Исходный список: {rank_list}')
+
 user_number = int(input('Введите натуральное число: '))
 
 if user_number >= max(rank_list):
@@ -21,4 +29,4 @@ else:
             rank_list.insert(i, user_number)
             break
 
-print(rank_list)
+print(f'Результат: {rank_list}')
