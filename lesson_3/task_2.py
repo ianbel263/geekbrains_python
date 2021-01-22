@@ -34,9 +34,7 @@ def get_user_data(message, is_int=False, is_negative=False):
 
 
 def parse_dict(data):
-    print('Данные пользователя: ', end='')
-    for key, value in data.items():
-        print(f'{key} - {value} / ', end='')
+    return '; '.join(f'{key.capitalize()}: {value}' for key, value in data.items())
 
 
 if __name__ == '__main__':
@@ -47,5 +45,6 @@ if __name__ == '__main__':
     user_email = get_user_data('Введите email пользователя: ')
     user_phone_number = get_user_data('Введите номер телефона пользователя: ', is_int=True)
 
-    parse_dict(create_new_user(name=user_name, surname=user_surname, email=user_email, birth_year=user_birth_year,
-                               phone_number=user_phone_number, city=user_city))
+    new_user = create_new_user(name=user_name, surname=user_surname, email=user_email, birth_year=user_birth_year,
+                               phone_number=user_phone_number, city=user_city)
+    print(parse_dict(new_user))
