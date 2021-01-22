@@ -24,11 +24,7 @@ def check_exit_key(data=None):
     return True if EXIT_KEY in data else False
 
 
-<<<<<<< HEAD
 EXIT_KEY = 'q'
-=======
-EXIT_KEY = 'y'
->>>>>>> lesson_3
 total = 0
 user_data = None
 
