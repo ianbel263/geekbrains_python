@@ -18,17 +18,18 @@ def replace_not_int(data):
     return data_list
 
 
-def check_exit_key(data):
-    if 'y' in data:
-        return True
+def check_exit_key(data=None):
+    if data is None:
+        data = []
+    return True if EXIT_KEY in data else False
 
 
+EXIT_KEY = 'q'
 total = 0
-is_exit_symbol_enter = False
+user_data = None
 
-while not is_exit_symbol_enter:
-    user_data = input('Введите строку чисел, разделенных пробелами (для выхода из программы введите "y"): ')
+while not check_exit_key(user_data):
+    user_data = input(f'Введите строку чисел, разделенных пробелами (для выхода из программы введите {EXIT_KEY}): ')
     total += sum(replace_not_int(user_data))
-    is_exit_symbol_enter = check_exit_key(user_data)
 
     print('Сумма:', total)
