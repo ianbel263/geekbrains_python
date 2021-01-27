@@ -37,7 +37,7 @@ analytics = {}
 
 for good in user_goods:
     for key, value in good[1].items():
-        if key in analytics and value not in analytics[key]:
+        if key in set(analytics) and value not in set(analytics[key]):
             analytics[key].append(value)
         else:
             analytics[key] = [value]

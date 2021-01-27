@@ -14,7 +14,8 @@ data = [
     {'number': 34, 'name': 'John'},
     bytes('строка', encoding='utf-8'),
     bytearray(b'text'),
+    lambda x: x
 ]
 
 for datum in data:
-    print(type(datum))
+    print(datum, type(datum))

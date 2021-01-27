@@ -2,15 +2,12 @@
 # 0 и 1, 2 и 3 и т.д. При нечетном количестве элементов последний сохранить на своем месте.
 # Для заполнения списка элементов необходимо использовать функцию input().
 
-user_data = None
 data = []
 
 print('Заполните список любыми данными, чтобы закончить заполнение просто нажмите "Enter":')
 
-while user_data != '':
-    user_data = input()
-    if user_data != '':
-        data.append(user_data)
+while user_data := input():
+    data.append(user_data)
 
 print(f'Было: {data}')
 

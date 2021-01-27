@@ -19,14 +19,26 @@ print(f'Исходный список: {rank_list}')
 
 user_number = int(input('Введите натуральное число: '))
 
-if user_number >= max(rank_list):
-    rank_list.insert(0, user_number)
-elif user_number <= min(rank_list):
-    rank_list.append(user_number)
+for i in range(1, len(rank_list)):
+    if user_number in (range(rank_list[i], rank_list[i - 1])):
+        rank_list.insert(i, user_number)
+        break
 else:
-    for i in range(1, len(rank_list)):
-        if user_number in (range(rank_list[i], rank_list[i - 1])):
-            rank_list.insert(i, user_number)
-            break
+    if user_number >= rank_list[0]:
+        rank_list.insert(0, user_number)
+    elif user_number <= rank_list[-1]:
+        rank_list.append(user_number)
+
+print(f'Результат: {rank_list}')
+
+# Простой способ
+rank_list = []
+for number in range(random.randint(10, 20)):
+    rank_list.append(random.randint(0, 10))
+
+print(f'Исходный список: {rank_list}')
+
+rank_list.append(int(input('Введите натуральное число: ')))
+rank_list.sort(reverse=True)
 
 print(f'Результат: {rank_list}')
