@@ -28,7 +28,7 @@ def create_lessons_dict(data):
         hour_numbers_matches = re.findall(pattern_hour_numbers, el)
         if name_match:
             name = name_match.group()
-            hour_numbers = sum(map(lambda x: int(x), hour_numbers_matches))
+            hour_numbers = sum(map(int, hour_numbers_matches))
             lessons_dict[name] = hour_numbers
     return lessons_dict
 

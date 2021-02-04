@@ -6,7 +6,7 @@ from random import randint
 
 def write_file(file_name, numbers):
     with open(file_name, 'w') as file:
-        file.write(' '.join(map(lambda x: str(x), numbers)))
+        file.write(' '.join(map(str, numbers)))
 
 
 def create_numbers_list():
@@ -22,7 +22,7 @@ def read_file(file_name):
 
 
 def get_sum(numbers):
-    return sum(map(lambda x: int(x), numbers))
+    return sum(map(int, numbers))
 
 
 write_file('task_5.txt', create_numbers_list())
