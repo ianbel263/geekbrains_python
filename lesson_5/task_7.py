@@ -41,7 +41,7 @@ def parse_data(data):
 
 def write_json_file(data):
     with open('task_7.json', 'w', encoding='utf-8') as file:
-        json.dump(data, file, ensure_ascii=False)
+        json.dump(data, file, indent=True, ensure_ascii=False)
 
 
 write_json_file(parse_data(read_file('task_7.txt')))
