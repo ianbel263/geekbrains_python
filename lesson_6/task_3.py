@@ -6,12 +6,6 @@
 # атрибутов, вызвать методы экземпляров).
 
 class Worker:
-    name = None
-    surname = None
-    position = None
-
-    _income = {}
-
     def __init__(self, name, surname, position, income):
         self.name = name
         self.surname = surname

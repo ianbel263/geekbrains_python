@@ -5,8 +5,6 @@
 # метод для каждого экземпляра.
 
 class Stationery:
-    title = None
-
     def __init__(self, title):
         self.title = title
 

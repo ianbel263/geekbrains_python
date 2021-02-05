@@ -8,10 +8,6 @@
 # выведите результат. Выполните вызов методов и также покажите результат.
 
 class Car:
-    name = ''
-    color = ''
-    is_police = False
-
     speed = 0
     direction = 0
 

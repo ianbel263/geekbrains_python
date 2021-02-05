@@ -6,9 +6,6 @@
 # Например: 20м * 5000м * 25кг * 5см = 12500 т
 
 class Road:
-    __length = None
-    __width = None
-
     def __init__(self, length, width):
         self.__length = length
         self.__width = width
